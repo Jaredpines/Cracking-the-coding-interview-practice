@@ -58,9 +58,9 @@ assert isUnique("Uncopyrightable") == True
 assert isUnique("Uncopyrightablu") == False
 
 print("Every thing passed")
-print("Method 1 total took: " + str(round(m1time, 4)) + " seconds")
-print("Method 2 total took: " + str(round(m2time, 4)) + " seconds")
-print("Difference in time between method 1 and method 2: " + str(abs(round(m1time-m2time, 6))) + " seconds")
+print("Method 1 took: " + str(round(m1time, 4)) + " seconds to complete the tests")
+print("Method 2 total took: " + str(round(m2time, 4)) + " seconds to complete the tests")
+print("Difference in time to complete the tests between method 1 and method 2: " + str(abs(round(m1time-m2time, 6))) + " seconds")
 if m1time < m2time:
     print("Method 1 is " + str(round(((m2time-m1time)/m2time)*100, 2)) + "% faster than method 2")
 else:
