@@ -64,4 +64,4 @@ print("Difference in time to complete the tests between method 1 and method 2: "
 if m1time < m2time:
     print("Method 1 is " + str(round(((m2time-m1time)/m2time)*100, 2)) + "% faster than method 2")
 else:
-    print("Method 2 is " + str(round(((m2time-m1time) / m1time)*100, 2)) + "% faster than method 1")
+    print("Method 2 is " + str(round(((m1time-m2time) / m1time)*100, 2)) + "% faster than method 1")
