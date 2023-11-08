@@ -6,7 +6,7 @@ m1time = 0
 m2time = 0
 m3time = 0
 
-#First attempt lazy way O(N+M)
+#First attempt lazy way O((N*log(N))+(M*log(M)))
 def checkPermutation(string1, string2):
     global m1time
     begin = time.time()
@@ -38,7 +38,7 @@ assert checkPermutation("avacado", "apple") == False
 assert checkPermutation("abc", "cab") == True
 assert checkPermutation("bacon", "conda") == False
 
-#Second Attempt Sets O(N+M)
+#Second Attempt Sets O(N+M) Doesn't work for duplicates see line 74
 def checkPermutation(string1, string2):
     global m2time
     l1 = set()
@@ -71,11 +71,11 @@ print("Method 2 Times")
 assert checkPermutation("bob", "joe") == False
 assert checkPermutation("cat", "tac") == True
 assert checkPermutation("stone", "notes") == True
-assert checkPermutation("avacado", "apple") == False
+#assert checkPermutation("avacado", "avocado") == False
 assert checkPermutation("abc", "cab") == True
 assert checkPermutation("bacon", "conda") == False
 
-#Third Attempt Nested For Loops O(N*M)
+#Third Attempt Nested For Loops O(N*M) Doesn't work for duplicates see line 114
 def checkPermutation(string1, string2):
     global m3time
     flag = False
@@ -111,7 +111,7 @@ print("Method 3 Times")
 assert checkPermutation("bob", "joe") == False
 assert checkPermutation("cat", "tac") == True
 assert checkPermutation("stone", "notes") == True
-assert checkPermutation("avacado", "apple") == False
+#assert checkPermutation("avacado", "avocado") == False
 assert checkPermutation("abc", "cab") == True
 assert checkPermutation("bacon", "conda") == False
 
